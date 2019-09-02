@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+
+
+
+        <title>Unoffical Comments</title>
+        <meta name="viewport" content="initial-scale=1 width=device-width">
+        <h1 id="h1" style="background-color:maroon;color:white;font-size:60px;text-align:center; margin-top: 0;">Rizvi Comment</h1>
+    </head>
+    <body>
+        <h2 style="text-align:center; margin-top:-0.9em;font-size:25px;">Keep it going  We do not have your details <img src="{{url_for('static', filename='images.jpg')}}" width="40" height="30"/></h2>
+                    <p id="p" style="height:400px;width:350px;overflow:scroll;border-width:0.2em;border-style:solid;border-color:black;">
+                    {% for student in students %}
+                    <img src="{{url_for('static', filename='blank.png')}}" style="margin:0.1cm 0.1cm 0.1cm" width="40" height="50">
+                        {% for d in student -%}
+                            {{d}}
+                        {%- endfor -%}
+                        <br>
+                    {%- endfor -%}
+                   </p>
+                 <form action="/register" method="POST" name="reload">
+                    <p style="background-color:AQUA;">
+                        <textarea name="name" style="height:45px;width:350px;font-size:14pt;"  placeholder="message......" ></textarea><br>
+                        <button type="submit" onclick="submit()" style="background-color:blue;color:white;font-size:14pt;width:25%;">Post</button>
+                    </p>
+                 </form>
+
+                 <script>
+                    var element = document.getElementById("p");
+                    element.scrollTop = element.scrollHeight;
+                </script>
+
+
+
+
+    </body>
+</html>
