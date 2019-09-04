@@ -9,6 +9,8 @@
     <body>
         <h2 style="text-align:center; margin-top:-0.9em;font-size:25px;">Keep it going  We do not have your details <img src="{{url_for('static', filename='images.jpg')}}" width="40" height="30"/></h2>
                     <p id="p" style="height:400px;width:350px;overflow:scroll;border-width:0.2em;border-style:solid;border-color:black;">
+
+                        {{Username}}
                     {% for student in students %}
                     <img src="{{url_for('static', filename='blank.png')}}" style="margin:0.1cm 0.1cm 0.1cm" width="40" height="50">
                         {% for d in student -%}
