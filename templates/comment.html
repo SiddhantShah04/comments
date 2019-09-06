@@ -2,29 +2,17 @@
     {% extends "Chat.html" %}
 
     {% block p %}
-
         <p id="p" style="height:400px;width:350px;overflow:scroll;border-width:0.2em;border-style:solid;border-color:black;">
-        <h4 style="margin-top:-3.5em;
-    margin-left:4em;
-    border-width:0.4em;
-    border:solid 3px;
-    font-family:cursive;
-    border-style:groove;
-    border-radius:45px 25px;
-    padding:0.3cm;
-    border-color:Lightskyblue;
-    background-color:Lightskyblue;
-    color:blue;
-    width:20%;
-    height:1%;
-    font-size:15px;">
             {% for student in students %}
+              <h4 style="margin-top:-3.5em;margin-left:4em;border-width:0.4em;border:solid 3px;font-family:cursive;
+                border-style:groove;border-radius:45px 25px;padding:0.3cm;border-color:Lightskyblue;background-color:Lightskyblue;
+                color:blue;width:20%;height:1%;
+                font-size:15px;">
                 {% for d in student -%}
                     {{d}}
                 {%- endfor -%}
+                </h4>
                 <br>
+            </p>
             {%- endfor -%}
-
-        </h4>
-        </p>
     {% endblock %}
