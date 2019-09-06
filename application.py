@@ -8,7 +8,7 @@ def index():
     file = open("registered.csv","r")
     reader=csv.reader(file)
     students=list(reader)
-    return render_template("Chat.html",students=students)
+    return render_template("comment.html",students=students)
 
 @app.route("/register",methods=["POST","GET"])
 def register():
@@ -27,6 +27,6 @@ def register():
         file = open("registered.csv","r")
         reader=csv.reader(file)
         students=list(reader)
-        return render_template("Chat.html",students=students)
+        return render_template("comment.html",students=students)
 
 
