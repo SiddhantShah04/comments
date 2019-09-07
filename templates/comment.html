@@ -5,8 +5,8 @@
         <div id="p" style="height:400px;width:350px;overflow-y:scroll;border-width:0.2em;border-style:solid;border-color:black;">
 
                 {% for student in students %}
-                <img src="{{url_for('static',filename='blank.png')}}" width="12%" height="12%"> <p style="word-wrap:break-word;background-color:rgba(169,169,169,0.4);margin-top:-3.3em;font-size:15px;font-family:Cambria;margin-left:2.8em;">
-                    {% for d in student -%}
+                <img src="{{url_for('static',filename='blank.png')}}" width="12%" height="12%" style="margin:0.3em;"> <p style="word-wrap:break-word;background-color:rgba(169,169,169,0.4);margin-top:-3.5em;font-size:16px;font-family:Cambria;margin-left:3.1em;">
+        &nbsp;      {% for d in student -%}
                         {{d}}
                     {%- endfor -%}
                     </p>
