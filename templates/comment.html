@@ -2,14 +2,14 @@
     {% extends "Chat.html" %}
 
     {% block p %}
+
+            <h3><b>Topic:</b>Assignment ka TADKA, kya tumhe is TADKE se pyar hai ya inkaar hai?</h3>
         <div id="p" style="height:400px;width:350px;overflow-y:scroll;border-width:0.2em;border-style:solid;border-color:black;">
 
                 {% for student in students %}
-                <img src="{{url_for('static',filename='blank.png')}}" width="12%" height="12%" style="margin:0.3em;"> <p style="word-wrap:break-word;background-color:rgba(169,169,169,0.4);margin-top:-3.5em;font-size:16px;font-family:Cambria;margin-left:3.1em;">
-        &nbsp;      {% for d in student -%}
-                        {{d}}
-                    {%- endfor -%}
+                <img src="{{url_for('static',filename='blank.png')}}" width="12%" height="12%" style="margin:0.3em;background-color:rgba(169,169,169,0.4);"> <p style="word-wrap:break-word;background-color:rgba(169,169,169,0.4);margin-top:-3.5em;font-size:16px;font-family:Cambria;margin-left:3.1em;">
 
+        &nbsp;      <b style="text-transform: uppercase;">{{student[0]}} :</b> {{student[1]}}
                     </p>
                 <hr style="margin-top:2em;">
                 {%- endfor -%}

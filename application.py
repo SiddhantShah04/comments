@@ -13,17 +13,23 @@ def index():
 @app.route("/register",methods=["POST","GET"])
 def register():
     if request.method == "POST":
+        if((request.form.get("name")) == ""):
+            return("<h4>Are you crazy or what?<br> write something in comment box.</h4>")
+        else:
 
-        file = open("registered.csv","a")
-        writer = csv.writer(file)
-        writer.writerow((request.form.get("name")))
-        file.close()
+            #for username
 
-        file = open("registered.csv","r")
-        reader=csv.reader(file)
-        students=list(reader)
-        return redirect(url_for("register"))
+            # for commemts
+            file = open("registered.csv","a")
+            writer = csv.writer(file)
+            writer.writerow((request.form.get("username"),request.form.get("name")))
+            file.close()
+
+            return redirect(url_for("register"))
     else:
+
+
+
         file = open("registered.csv","r")
         reader=csv.reader(file)
         students=list(reader)
